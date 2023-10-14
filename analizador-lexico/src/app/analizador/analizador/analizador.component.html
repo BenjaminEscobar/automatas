@@ -1,0 +1,14 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="text-center">
+        <h1>Analizador léxico basico</h1>
+        
+        <div class="form-group">
+            <textarea class="form-control" rows="5" id="textareaInput" [(ngModel)]="cadena"></textarea>
+        </div>
+        <br>
+        <button (click)="obtieneAnalisis()" class="btn btn-primary" [disabled]="!cadena || cadena.trim() === ''">Analizar</button>
+        <div *ngIf="!cadena || cadena.trim() === ''">
+            El campo de texto no puede estar vacío.
+        </div>
+    </div>
+</div>

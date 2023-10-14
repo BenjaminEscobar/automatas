@@ -1,0 +1,39 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div>
+        <h1>Nombre clase: {{clase}}</h1> 
+
+        <h2>Lexema</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>                    
+                    <th>Lexema</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of token">
+                    <td>{{ item.lexeme }}</td>
+                    <td>{{ item.name }}</td>                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Atributo</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Tipo de dato</th>
+                    <th>Nombre</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of atributo">
+                    <td>{{ item.type }}</td>
+                    <td>{{ item.name }}</td>                    
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button class="btn btn-primary" (click)="regresar()">Regresar</button>
+    </div>
+</div>
